@@ -1,0 +1,21 @@
+{
+  "name": "Food Orders Flex Template",
+  "description": "Process food orders CSV and load to BigQuery",
+  "parameters": [
+    {
+      "name": "input",
+      "label": "Input CSV file",
+      "helpText": "GCS path to input CSV"
+    },
+    {
+      "name": "project_id",
+      "label": "Project ID",
+      "helpText": "GCP project ID"
+    },
+    {
+      "name": "bq_dataset",
+      "label": "BigQuery Dataset",
+      "helpText": "BigQuery dataset name"
+    }
+  ]
+}
