@@ -77,3 +77,4 @@ The pipeline creates two BigQuery tables:
 - `other_status_orders`: Orders with other statuses (pending, cancelled, etc.)
 
 Both tables are partitioned by day for optimal query performance and cost efficiency.
+# gcp-food-delivery-data-pipeline
