@@ -1,0 +1,13 @@
+FROM gcr.io/dataflow-templates-base/python311-template-launcher-base
+
+WORKDIR /pipeline
+
+COPY beam.py .
+COPY setup.py .
+COPY metadata.json .
+
+RUN pip install --no-cache-dir apache-beam[gcp]==2.54.0 google-cloud-bigquery
+
+# REQUIRED by Flex Templates
+ENV FLEX_TEMPLATE_PYTHON_PY_FILE=/pipeline/beam.py
+ENV FLEX_TEMPLATE_PYTHON_SETUP_FILE=/pipeline/setup.py
